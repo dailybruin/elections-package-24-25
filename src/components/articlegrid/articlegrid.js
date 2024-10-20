@@ -1,7 +1,7 @@
 // import the card
 import React from 'react';
 // adjust this path as necessary from the articlecard team implementation
-import { ArticleCard } from "../articlecard/articlecard";
+import { ArticleCard } from "../../articlecard/articlecard";
 import styles from "./articlegrid";
 
 const ArticleGrid = ({ articles }) => {
