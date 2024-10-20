@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import ArticleGrid from "./articlegrid/articlegrid";
 
 // yes
 function App() {
@@ -18,6 +19,7 @@ function App() {
     <div className="App">
       <Header/>
       Hello Daily Bruin!
+      <ArticleGrid />
       <Footer/>
     </div>
   );
