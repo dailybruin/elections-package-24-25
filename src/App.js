@@ -2,9 +2,8 @@ import React, { useState, useEffect } from "react";
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import ArticleGrid from "./articlegrid/articlegrid";
+import ArticleGrid from "./components/articlegrid/articlegrid";
 
-// yes
 function App() {
   const [ data, setData ] = useState(null);
   
@@ -19,7 +18,9 @@ function App() {
     <div className="App">
       <Header/>
       Hello Daily Bruin!
-      <ArticleGrid />
+      <ArticleGrid articles={data.national} title="National" />
+      <ArticleGrid articles={data.state} title="State" />
+      <ArticleGrid articles={data.local} title="Local" />
       <Footer/>
     </div>
   );
