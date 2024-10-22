@@ -1,7 +1,8 @@
 // import the card
 import React from 'react';
-// adjust this path as necessary from the articlecard team implementation
-import { ArticleCard } from "../../articlecard/articlecard";
+import Container from 'react-bootstrap/Container'; // for React Bootstrap
+
+import ArticleCard from "../ArticleCard"
 import styles from "./articlegrid";
 
 const ArticleGrid = ({ articles }) => {
