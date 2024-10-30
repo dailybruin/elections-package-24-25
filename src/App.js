@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Landing from './components/Landing';
 
 function App() {
   const [ data, setData ] = useState(null);
@@ -16,6 +17,7 @@ function App() {
   return data && (
     <div className="App">
       <Header/>
+      <Landing landing={data.landing_image}/>
       Hello Daily Bruin!
       <Footer/>
     </div>
