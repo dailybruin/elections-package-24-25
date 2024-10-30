@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Landing from './components/Landing';
+import Cursor from './images/PencilCursor.svg';
 
 function App() {
   const [ data, setData ] = useState(null);
@@ -15,7 +16,7 @@ function App() {
 
 
   return data && (
-    <div className="App">
+    <div className="App" style={{cursor: `url(${Cursor}), auto`}}>
       <Header/>
       <Landing landing={data.landing_image}/>
       Hello Daily Bruin!
