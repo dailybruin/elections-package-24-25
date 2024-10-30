@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import ArticleGrid from "./components/articlegrid/articlegrid";
+import ArticleGrid from "./components/ArticleGrid";
+import Landing from './components/Landing';
+import Cursor from './images/PencilCursor.svg';
 
 function App() {
   const [data, setData] = useState(null);
@@ -16,12 +18,13 @@ function App() {
   }, []);
 
   return data && (
-    <div className="App">
+    /*<div className="App" style={{cursor: `url(${Cursor}), auto`}}>*/
+    <div className="App" style={{background: `#ADD8E6`}}>
       <Header/>
-      Hello Daily Bruin!
-      <ArticleGrid articles={data.national} title="National" />
-      <ArticleGrid articles={data.state} title="State" />
-      <ArticleGrid articles={data.local} title="Local" />
+      <Landing landing={data.landing_image}/>
+      <ArticleGrid articles={data.national} title="NATIONAL" />
+      <ArticleGrid articles={data.state} title="STATE" />
+      <ArticleGrid articles={data.local} title="LOCAL" />
       <Footer/>
     </div>
   );

@@ -13,6 +13,7 @@ const ArticleContainer = styled("div")`
 `;
 
 const TitleContainer = styled("div")`
+  margin-top: 1em;
   font-size: 33px;
   font-weight: 500;
   line-height: 43px; /* 130.303% */
@@ -35,17 +36,15 @@ const ArticleCard = ({ props }) => {
     <ArticleContainer>
       <ImgContainer>
         <img
-          src={props.article_img}
+          src={props.article_image}
           alt="Article"
           style={{ width: "100%", height: "100%" }}
         ></img>
       </ImgContainer>
       <div>
-        <TitleContainer>{props.article_title}</TitleContainer>
+      <TitleContainer>{props.article_title}</TitleContainer>
         <div style={{ fontSize: "28px", fontWeight: 300, lineHeight: "34px" }}>
-          {props.article_byline}
-          <br></br>
-          {props.article_url}
+        {props.article_byline}
         </div>
       </div>
     </ArticleContainer>
