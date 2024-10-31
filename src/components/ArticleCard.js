@@ -10,6 +10,7 @@ const ArticleContainer = styled("div")`
   font-style: normal;
   margin: 2%;
   background: white;
+  
 `;
 
 const TitleContainer = styled("div")`

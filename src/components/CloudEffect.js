@@ -9,11 +9,13 @@ const CloudLayer = styled.div`
   width: 100%;
   height: 200%; /* Making it taller to cover the screen smoothly */
   background-image: url(${Cloud001});
-  background-repeat: repeat-y;
+  background-repeat: repeat;
   background-size: ${({ cloudSize }) => cloudSize || "50%"};
-  transform: translateY(${({ offsetY }) => offsetY || "0"}px);
+  transform: translate(
+    ${({ offsetX }) => offsetX || "0"}px,
+    ${({ offsetY }) => offsetY || "0"}px
+  );
   opacity: ${({ opacity }) => opacity || 0.5};
-  z-index: 1;
   transition: transform 0.5s ease-out;
 `;
 
@@ -31,14 +33,28 @@ const Clouds = () => {
     };
   }, []);
 
-  // Offset the clouds slightly based on scroll position
   const getCloudOffset = (layerOffset) => -(scrollPosition * layerOffset);
 
   return (
     <>
-      <CloudLayer top="10%" cloudSize="40%" offsetY={getCloudOffset(0.2)} opacity="0.7" />
-      <CloudLayer top="20%" cloudSize="30%" offsetY={getCloudOffset(0.4)} opacity="0.5" />
-      <CloudLayer top="30%" cloudSize="20%" offsetY={getCloudOffset(0.6)} opacity="0.3" />
+      <CloudLayer 
+        top="10%" 
+        cloudSize="40%" 
+        offsetY={getCloudOffset(0.2)} 
+        opacity="0.7" 
+      />
+      <CloudLayer 
+        top="20%" 
+        cloudSize="30%" 
+        offsetY={getCloudOffset(0.4)} 
+        opacity="0.5" 
+      />
+      <CloudLayer 
+        top="30%" 
+        cloudSize="20%" 
+        offsetY={getCloudOffset(0.6)} 
+        opacity="0.3" 
+      />
     </>
   );
 };
