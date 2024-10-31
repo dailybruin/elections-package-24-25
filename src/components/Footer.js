@@ -19,37 +19,29 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   padding: 0;
-  height: auto;
-  margin-bottom: 0;
-  min-height: 600px;
+  height: 400px; /* Set fixed height to control footer size */
+  margin: 0;
 
   @media (max-width: 768px) {
-    background-size: 150% auto; /* Increase background coverage on smaller screens */
-    min-height: 400px; 
+    background-size: 150% auto;
+    height: 175px; /* Adjusted for smaller screens */
   }
 `;
 
 const FooterBox = styled.div`
   background-image: url(${footerbox});
   background-size: contain;
-  background-position: center;
+  background-position: center bottom;
   background-repeat: no-repeat;
   width: 100%;
   max-width: 1200px;
-  height: 600px;
-  position: relative;
+  height: 100%; /* Make it fill the Container’s height */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  margin-bottom: 0;
-
-  @media (max-width: 768px) {
-    height: 400px; /* Reduced height on smaller screens */
-  }
-  @media (max-width: 480px) {
-    height: 300px; /* Further reduction for smaller devices */
-  }
+  position: relative;
+  overflow: hidden; /* Ensure nothing spills out if heights are limited */
 `;
 
 const GoldPlate = styled.div`
@@ -58,73 +50,65 @@ const GoldPlate = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   width: 55%;
-  height: 140px;
+  height: 120px;
   position: absolute;
-  top: 48%;
+  top: 50%; /* Position within reduced height */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transform: translateY(-5%); /* Ensure it remains vertically centered */
 
-  h1 {
-    font-size: 1.5rem;
-    color: black;
-    margin: 0;
-  }
-
-  /* Responsive adjustments */
   @media (max-width: 768px) {
     width: 65%;
-    height: 100px;
+    height: 70px;
     h1 {
       font-size: 1.2rem;
     }
   }
   @media (max-width: 480px) {
     width: 75%;
-    height: 90px;
-    h1 {
-      font-size: 1rem;
-    }
+    height: 60px;
+
   }
 `;
 
 const Socials = styled.div`
   display: flex;
   justify-content: center;
-  gap: 10px; /* Reduce gap on smaller screens */
-  margin-top: 25px;
+  gap: 10px;
+  margin-top: 30px;
 
   img {
     width: 24px;
     height: 24px;
   }
 
-  /* Responsive icon sizing */
   @media (max-width: 768px) {
     img {
-      width: 20px;
-      height: 20px;
+      width: 15px;
+      height: 15px;
     }
   }
   @media (max-width: 480px) {
     img {
-      width: 16px;
-      height: 16px;
+      width: 10px;
+      height: 10px;
     }
   }
 `;
 
 const SuzyText = styled.p`
   position: absolute;
-  bottom: 120px;
+  bottom: 30px;
   font-size: 14px;
   color: white;
   text-align: center;
+  width: 100%;
 
   ${mediaQueries.mobile} {
-    font-size: 12px;
-    bottom: 70px;
+    font-size: 8px;
+    bottom: 3px;
   }
 `;
 
@@ -145,7 +129,7 @@ const Footer = () => {
       </FooterBox>
     </Container>
   );
-}
+};
 
 export default Footer;
 
