@@ -21,7 +21,7 @@ function App() {
   return data && (
     /*<div className="App" style={{cursor: `url(${Cursor}), auto`}}>*/
     <>
-    <div className="App">
+    <div className="App" style={{ background: '#94ccee', zIndex: -1 }}>
       <Header/>
       <Landing landing={data.landing_image}/>
       <div style={{ position: 'relative' }}>

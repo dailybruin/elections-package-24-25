@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import FlagRight from "../images/FlagRight.svg";
-import FlagLeft from "../images/FlagRight.svg";
+import FlagLeft from "../images/FlagLeft.svg";
 
 
 const Flags = styled.div`
@@ -9,9 +9,8 @@ const Flags = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; 
-    background-color: #94ccee;
-    background-size: 25% 15%; 
+    z-index: 2; 
+    background-size: 25% 25%; 
     background-repeat: repeat-y;
     background-image: 
     url(${FlagRight}), 
