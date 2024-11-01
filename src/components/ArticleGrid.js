@@ -2,12 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 import ArticleCard from "../components/ArticleCard.js";
 
+
 const Container = styled.div`
+    position: relative;
     width: 60%;
     margin: 0 auto;
     justify-content: center;
     padding: 1em;
     background: white;
+    z-index: 10;
 `;
 
 const TitleContainer = styled.div`
