@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import FlagRight from "../images/FlagRight.svg";
 import FlagLeft from "../images/FlagRight.svg";
-import VoteSign from "../images/VoteSign.svg";
+import VoteSignRight from "../images/VoteSignRight.svg";
+import VoteSignLeft from "../images/VoteSignLeft.svg";
 import FlagHighLow from "../images/FlagHighLow.svg";
 import FlagLowHigh from "../images/FlagLowHigh.svg";
 
@@ -49,11 +50,10 @@ const LeftVoteSign = styled.div`
   left: 0;
   width: 20vw; 
   height: 100%;
-  background-image: url(${VoteSign});
+  background-image: url(${VoteSignLeft});
   background-repeat: repeat-y;
-  background-size: 100% 150em;
+  background-size: 100% 160em;
   background-position: left 100em;
-  transform: scaleX(-1);
 `;
 
 // Right Vote Sign
@@ -63,50 +63,69 @@ const RightVoteSign = styled.div`
   right: 0;
   width: 20vw;
   height: 100%;
-  background-image: url(${VoteSign});
+  background-image: url(${VoteSignRight});
   background-repeat: repeat-y;
   background-size: 100% 150em;
   background-position: right 200em; 
 `;
 
 // Horizontal Flag Strings
-const HighLowFlagString = styled.div`
-  position: absolute;
-  top: 85%; /* Adjust based on where you'd like it placed in the layout */
-  left: 0;
-  width: 100%;
-  height: 5vh; /* Control flag height */
-  background-image: url(${FlagHighLow});
-  background-repeat: no-repeat;
-  background-size: contain;
-  z-index: 1;
-`;
 
-const LowHighFlagString = styled.div`
+const HighLowFlag1 = styled.div`
   position: absolute;
-  top: 90%; /* Position slightly lower than HighLowFlagString */
-  left: 0;
-  width: 100%;
-  height: 5vh;
-  background-image: url(${FlagLowHigh});
-  background-repeat: no-repeat;
-  background-size: contain;
-  z-index: 1;
-`;
-
-const TestFlagString = styled.div`
-  position: absolute;
-  top: 85%; /* Adjust based on desired layout placement */
+  top: 13.2%; /* Adjust based on desired layout placement */
   left: 0;
   width: 100%;
   height: 150vh; /* Adjust to control flag height */
   background-image: url(${FlagHighLow});
-  background-repeat: no-repeat;
-  background-size: cover; /* Ensure image fills the width */
-  background-position: center; /* Center the image within the div */
+  background-repeat: repeat-y;
+  background-size: cover; 
+  background-position: center; 
   z-index: -1;
   background-color: rgba(255, 255, 0, 0.3); /* Yellow tint for visibility */
 `;
+
+const HighLowFlag2 = styled.div`
+  position: absolute;
+  top: 77%; /* Adjust based on desired layout placement */
+  left: 0;
+  width: 100%;
+  height: 150vh; /* Adjust to control flag height */
+  background-image: url(${FlagHighLow});
+  background-repeat: repeat-y;
+  background-size: cover; 
+  background-position: center; 
+  z-index: -1;
+  background-color: rgba(255, 255, 0, 0.3); /* Yellow tint for visibility */
+`;
+
+const LowHighFlag1 = styled.div`
+  position: absolute;
+  top: 0%; /* Adjust based on desired layout placement */
+  left: 0;
+  width: 100%;
+  height: 150vh; /* Adjust to control flag height */
+  background-image: url(${FlagLowHigh});
+  background-repeat: repeat-y;
+  background-size: cover; 
+  background-position: center; 
+  z-index: -1;
+  background-color: rgba(255, 255, 0, 0.3); /* Yellow tint for visibility */
+ `;
+
+const LowHighFlag2 = styled.div`
+  position: absolute;
+  top: 44%; /* Adjust based on desired layout placement */
+  left: 0;
+  width: 100%;
+  height: 150vh; /* Adjust to control flag height */
+  background-image: url(${FlagLowHigh});
+  background-repeat: repeat-y;
+  background-size: cover; 
+  background-position: center; 
+  z-index: -1;
+  background-color: rgba(255, 255, 0, 0.3); /* Yellow tint for visibility */
+ `;
 
 const Background = () => {
   return (
@@ -115,7 +134,10 @@ const Background = () => {
       <RightFlag />
       <LeftVoteSign />
       <RightVoteSign />
-      <TestFlagString /> {/* Use this single test component for debugging */}
+      <HighLowFlag1 /> 
+      <HighLowFlag2 /> 
+      <LowHighFlag1 />
+      <LowHighFlag2 />  
     </FlagsContainer>
   );
 };
