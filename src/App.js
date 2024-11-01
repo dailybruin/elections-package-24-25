@@ -21,7 +21,10 @@ function App() {
     /*<div className="App" style={{cursor: `url(${Cursor}), auto`}}>*/
     <div className="App" style={{background: `#ADD8E6`}}>
       <Header/>
-      <Landing landing={data.landing_image}/>
+      <Landing/>
+      <br></br>
+      <br></br>
+      <br></br>
       <ArticleGrid articles={data.national} title="NATIONAL" />
       <ArticleGrid articles={data.state} title="STATE" />
       <ArticleGrid articles={data.local} title="LOCAL" />

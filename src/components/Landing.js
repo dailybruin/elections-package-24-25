@@ -13,18 +13,18 @@ const Container = styled.div`
     overflow: hidden;
 `;
 
-const Image = styled.img`
-  width: 100vw;
-  height: auto;
-  object-fit: cover;
-`;
-
-const Landing = ({landing}) => {
+const Landing = () => {
     
     return (
         <>
             <Container>
-                <Image src={landing}/>
+            <iframe src="https://public.flourish.studio/visualisation/20011174/embed" 
+        width="100%" 
+        height="600px" 
+        frameborder="0" 
+        scrolling="no" 
+        allowfullscreen>
+        </iframe>
             </Container>
         </>
     );
