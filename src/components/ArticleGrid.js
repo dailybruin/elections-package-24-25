@@ -1,5 +1,5 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from "react";
+import styled from "styled-components";
 import ArticleCard from "../components/ArticleCard.js";
 
 
@@ -14,13 +14,15 @@ const Container = styled.div`
 `;
 
 const TitleContainer = styled.div`
-    gap: 0px;
-    width: 62.5%;
-    margin: 0 auto;
-    justify-content: center;
-    opacity: 0px;
-    background: #265CA9;
-`
+  gap: 0px;
+  width: 62.5%;
+  margin: 0 auto;
+  justify-content: center;
+  opacity: 0px;
+  background: #265ca9;
+  position: relative;
+  z-index: 1;
+`;
 const Title = styled.div`
     font-family: BruinBlock;
     font-size: clamp(40px, 5vw, 70px);
@@ -32,34 +34,38 @@ const Title = styled.div`
 `
 
 const WhiteStripe = styled.div`
-    width: 62.5%;
-    height: 1em;
-    margin: 0 auto;
-    background: #FFFFFF;
+  width: 62.5%;
+  height: 1em;
+  margin: 0 auto;
+  background: #ffffff;
+  position: relative;
+  z-index: 1;
 `;
 
-const RedStripe= styled.div`
-    width: 62.5%;
-    height: 1em;
-    margin: 0 auto;
-    background: #CD2027;
+const RedStripe = styled.div`
+  width: 62.5%;
+  height: 1em;
+  margin: 0 auto;
+  background: #cd2027;
+  position: relative;
+  z-index: 1;
 `;
 
 const ArticleGrid = ({ articles, title }) => {
-    return (
-        <>
-        <TitleContainer>
-            <Title>★{title}★</Title>
-        </TitleContainer>
-        <WhiteStripe />
-        <RedStripe />
-        <Container>
-            {articles.map((article) => {
-                return <ArticleCard props={article} />;
-            })}
-        </Container>
-        </>
-    );
+  return (
+    <>
+      <TitleContainer>
+        <Title>★{title}★</Title>
+      </TitleContainer>
+      <WhiteStripe />
+      <RedStripe />
+      <Container>
+        {articles.map((article) => {
+          return <ArticleCard props={article} />;
+        })}
+      </Container>
+    </>
+  );
 };
 
 export default ArticleGrid;

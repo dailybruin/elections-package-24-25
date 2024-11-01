@@ -6,6 +6,7 @@ import ArticleGrid from "./components/ArticleGrid";
 import Landing from './components/Landing';
 import Background from './components/Background';
 import Cursor from './images/PencilCursor.svg';
+import CloudEffect from './components/CloudEffect';
 
 function App() {
   const [data, setData] = useState(null);
@@ -19,13 +20,13 @@ function App() {
   }, []);
 
   return data && (
-    /*<div className="App" style={{cursor: `url(${Cursor}), auto`}}>*/
-    <div className="App" style={{background: '#94ccee',  zIndex: -1}}>
+    <div className="App" style={{background: '#94ccee',  zIndex: -1, cursor: `url(${Cursor}), auto`}}>
       <Header/>
       <Landing/>
       <br></br>
       <br></br>
       <br></br>
+      <CloudEffect/>
       <div style={{ position: 'relative' }}>
         <Background />
         <ArticleGrid articles={data.national} title="NATIONAL" />

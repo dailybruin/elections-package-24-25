@@ -100,14 +100,14 @@ const Socials = styled.div`
 
 const SuzyText = styled.p`
   position: absolute;
-  bottom: 30px;
+  bottom: 0.1em;
   font-size: 14px;
   color: white;
   text-align: center;
-  width: 100%;
+  width: 70%;
 
   ${mediaQueries.mobile} {
-    font-size: 8px;
+    font-size: 4px;
     bottom: 3px;
   }
 `;
@@ -125,7 +125,7 @@ const Footer = () => {
             <a href="http://eepurl.com/cFEiZX" target="_blank" rel="noreferrer"><img src={email} alt="Email"/></a>
           </Socials>
         </GoldPlate>
-        <SuzyText>Built with Suzy’s ♥ in Kerckhoff 118 by [developers]. Designed by [designers].</SuzyText>
+        <SuzyText>Built with Suzy’s ♥ in Kerckhoff 118 by Henry Nguyen, Max Fukuhara, Emily Zhang, Sahil Sheth, Evelyn Cho, Armaan Bassi, Jennifer Lee, Ritvik Irigireddy, Kirsten Reign Cabalonga, and Sakshi Thoutireddy. Designed by Crystal Tompkins, Lindsey Murto, Tyler Cho, and Shrey Chaganlal.</SuzyText>
       </FooterBox>
     </Container>
   );
