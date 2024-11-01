@@ -20,7 +20,7 @@ const TitleContainer = styled.div`
 `
 const Title = styled.div`
     font-family: BruinBlock;
-    font-size: 75px;
+    font-size: clamp(40px, 5vw, 70px);
     font-weight: 900;
     line-height: 90px;
     text-align: center;
