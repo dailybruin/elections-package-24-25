@@ -19,7 +19,7 @@ function App() {
 
   return data && (
     /*<div className="App" style={{cursor: `url(${Cursor}), auto`}}>*/
-    <div className="App" style={{background: `#ADD8E6`}}>
+    <div className="App" style={{background: `#94CCEF`}}>
       <Header/>
       <Landing/>
       <br></br>
