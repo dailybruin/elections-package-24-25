@@ -82,7 +82,8 @@ const Landing = () => {
         height="600px" 
         frameborder="0" 
         scrolling="no" 
-        allowfullscreen>
+        allowfullscreen
+        title="polling averages">
         </iframe>
             </Container>
         </>
