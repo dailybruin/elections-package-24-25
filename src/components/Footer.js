@@ -11,6 +11,7 @@ import styled from 'styled-components'
 import { mediaQueries } from '../shared/config';
 
 const Container = styled.div`
+
   background-color: #94CCEF;
   background-image: url(${footerflagbg});
   background-size: 100% auto;
@@ -23,6 +24,7 @@ const Container = styled.div`
   margin: 0;
   z-index: 1; /* Set lower than the article grid */
 
+
   @media (max-width: 768px) {
     background-size: 150% auto;
     height: 175px; /* Adjusted for smaller screens */
@@ -30,6 +32,7 @@ const Container = styled.div`
 `;
 
 const FooterBox = styled.div`
+
   background-image: url(${footerbox});
   background-size: contain;
   background-position: center bottom;
@@ -82,16 +85,10 @@ const Socials = styled.div`
   gap: 10px;
   margin-top: 30px;
 
-  z-index: 5;
 
-  a {
-    display: inline-block;
-    position: relative;
-    cursor: pointer;
-    width: 24px;
-    height: 24px;
-    z-index: 6;
-  }
+
+
+  
   img {
     width: 24px;
     height: 24px;
@@ -131,11 +128,11 @@ const Footer = () => {
       <FooterBox>
         <GoldPlate>
           <Socials>
-            <a href="https://www.instagram.com/dailybruin" target="_blank" rel="noreferrer"><img src={insta} alt="Instagram"/></a>
-            <a href="https://www.facebook.com/dailybruin" target="_blank" rel="noreferrer"><img src={fb} alt="Facebook"/></a>
-            <a href="https://www.twitter.com/dailybruin" target="_blank" rel="noreferrer"><img src={twitter} alt="Twitter"/></a>
-            <a href="https://www.tiktok.com/@dailybruin" target="_blank" rel="noreferrer"><img src={tiktok} alt="TikTok"/></a>
-            <a href="http://eepurl.com/cFEiZX" target="_blank" rel="noreferrer"><img src={email} alt="Email"/></a>
+            <a href="https://www.instagram.com/dailybruin" target="_blank" rel="noreferrer"  ><img src={insta} alt="Instagram"/></a>
+            <a href="https://www.facebook.com/dailybruin" target="_blank" rel="noreferrer" ><img src={fb} alt="Facebook"/></a>
+            <a href="https://www.twitter.com/dailybruin" target="_blank" rel="noreferrer" ><img src={twitter} alt="Twitter"/></a>
+            <a href="https://www.tiktok.com/@dailybruin" target="_blank" rel="noreferrer" ><img src={tiktok} alt="TikTok"/></a>
+            <a href="http://eepurl.com/cFEiZX" target="_blank" rel="noreferrer" ><img src={email} alt="Email"/></a>
           </Socials>
         </GoldPlate>
         <SuzyText>Built with Suzy’s ♥ in Kerckhoff 118 by Henry Nguyen, Max Fukuhara, Emily Zhang, Sahil Sheth, Evelyn Cho, Armaan Bassi, Jennifer Lee, Ritvik Irigireddy, Kirsten Reign Cabalonga, and Sakshi Thoutireddy. Designed by Nhan Nguyen and Lindsey Murto.</SuzyText>
