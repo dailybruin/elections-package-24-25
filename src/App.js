@@ -6,7 +6,8 @@ import ArticleGrid from "./components/ArticleGrid";
 import Interactive from './components/Interactive';
 import Landing from './components/Landing';
 import Background from './components/Background';
-import Cursor from './images/PencilCursor.svg';
+//import Cursor from './images/PencilCursor.svg';
+import Cursor from './images/PencilCursor.png';
 import CloudEffect from './components/CloudEffect';
 
 function App() {
