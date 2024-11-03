@@ -63,7 +63,7 @@ const LeftVoteSign1 = styled.div`
 const LeftVoteSign2 = styled.div`
   position: absolute;
   top: 20vh; /* Adjusted to provide spacing and ensure visibility */
-  left: -20vh;
+  left: -9vh;
   width: 30vw;
   height: auto;
   min-height: 160vh;
