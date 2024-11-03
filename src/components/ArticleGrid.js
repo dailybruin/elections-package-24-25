@@ -11,17 +11,16 @@ const Container = styled.div`
     padding: 1em;
     background: white;
     z-index: 10;
-     /* Add a negative margin to overlap the footer */
-    margin-bottom: -62px; /* Adjust this value as needed */
-     /* Adjust margin for smaller screens */
+
+    /* Only apply the negative margin if isLast is true */
+    margin-bottom: ${({ isLast }) => (isLast ? '-62px' : '0')};
+
     @media (max-width: 768px) {
-        margin-bottom: -70px; /* Removes overlap for mobile */
-        width: 80%; /* Optional: Adjust width for mobile */
+      margin-bottom: ${({ isLast }) => (isLast ? '-70px' : '0')};
     }
 
     @media (max-width: 480px) {
-        margin-bottom: -80px; /* Removes overlap for very small screens */
-        width: 90%; /* Optional: Adjust width for smaller screens */
+      margin-bottom: ${({ isLast }) => (isLast ? '-80px' : '0')};
     }
 `;
 
@@ -63,7 +62,7 @@ const RedStripe = styled.div`
   z-index: 1;
 `;
 
-const ArticleGrid = ({ articles, title }) => {
+const ArticleGrid = ({ articles, title, isLast }) => {
   return (
     <>
       <TitleContainer>
@@ -71,7 +70,7 @@ const ArticleGrid = ({ articles, title }) => {
       </TitleContainer>
       <WhiteStripe />
       <RedStripe />
-      <Container>
+      <Container isLast={isLast}>
         {articles.map((article) => {
           return <ArticleCard props={article} />;
         })}

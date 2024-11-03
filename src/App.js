@@ -5,7 +5,8 @@ import Footer from './components/Footer';
 import ArticleGrid from "./components/ArticleGrid";
 import Landing from './components/Landing';
 import Background from './components/Background';
-import Cursor from './images/PencilCursor.svg';
+//import Cursor from './images/PencilCursor.svg';
+import Cursor from './images/PencilCursor.png';
 import CloudEffect from './components/CloudEffect';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
     )
       .then((res) => res.json())
       .then((res) => setData(res.data["article.aml"]));
+
   }, []);
 
   return data && (
@@ -31,7 +33,7 @@ function App() {
         <Background />
         <ArticleGrid articles={data.national} title="NATIONAL" />
         <ArticleGrid articles={data.state} title="STATE" />
-        <ArticleGrid articles={data.local} title="LOCAL" />
+        <ArticleGrid articles={data.local} title="LOCAL"  isLast={true} />
       </div>
       <Footer/>
     </div>
