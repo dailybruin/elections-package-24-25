@@ -10,7 +10,7 @@ import CloudEffect from './components/CloudEffect';
 
 function App() {
   const [data, setData] = useState(null);
-
+  
   useEffect(() => {
     fetch(
       "https://kerckhoff.dailybruin.com/api/packages/flatpages/elections-package-24-25"
@@ -20,8 +20,10 @@ function App() {
 
   }, []);
 
+
+
   return data && (
-    <div className="App" style={{background: '#94ccee',  zIndex: -1, cursor: `url(${Cursor}), auto`}}>
+    <div className="App" style={{background: '#94ccee',  zIndex: -1, cursor: `url(${Cursor}) 20 80, auto`}}>
       <Header/>
       <Landing/>
       <br></br>
