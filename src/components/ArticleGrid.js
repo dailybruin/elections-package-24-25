@@ -11,6 +11,18 @@ const Container = styled.div`
     padding: 1em;
     background: white;
     z-index: 10;
+     /* Add a negative margin to overlap the footer */
+    margin-bottom: -62px; /* Adjust this value as needed */
+     /* Adjust margin for smaller screens */
+    @media (max-width: 768px) {
+        margin-bottom: -70px; /* Removes overlap for mobile */
+        width: 80%; /* Optional: Adjust width for mobile */
+    }
+
+    @media (max-width: 480px) {
+        margin-bottom: -80px; /* Removes overlap for very small screens */
+        width: 90%; /* Optional: Adjust width for smaller screens */
+    }
 `;
 
 const TitleContainer = styled.div`
