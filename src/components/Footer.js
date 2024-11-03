@@ -21,6 +21,7 @@ const Container = styled.div`
   padding: 0;
   height: 400px; /* Set fixed height to control footer size */
   margin: 0;
+  z-index: 1; /* Set lower than the article grid */
 
   @media (max-width: 768px) {
     background-size: 150% auto;
@@ -41,8 +42,10 @@ const FooterBox = styled.div`
   align-items: center;
   justify-content: flex-end;
   position: relative;
+  z-index: 2; /* Ensure FooterBox is above Container */
   overflow: hidden; /* Ensure nothing spills out if heights are limited */
 `;
+
 
 const GoldPlate = styled.div`
   background-image: url(${footergoldplate});
@@ -79,6 +82,16 @@ const Socials = styled.div`
   gap: 10px;
   margin-top: 30px;
 
+  z-index: 5;
+
+  a {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    z-index: 6;
+  }
   img {
     width: 24px;
     height: 24px;
