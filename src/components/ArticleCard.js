@@ -77,11 +77,11 @@ const ArticleContainer = styled("div")`
     text-align: center;
   }
 
-  &:hover ${GraphiteUnderline} {
+  &:hover ${GraphiteUnderline} { // graphite underline when hover
     opacity: 1;
   }
 
-  &:hover ${BubbleGraphite} {
+  &:hover ${BubbleGraphite} { // graphite bubble fill in when hover
     opacity: 1;
   }
 `;
@@ -105,11 +105,13 @@ const ImgContainer = styled("div")`
   border: 2px solid #000;
   background: #949494;
   width: 400.361px;
+  height: 300px;
   max-width: 100%;
   max-height: 100%;
-  height: 300px;
   display: flex;
   flex-shrink: 0;
+  object-fit: cover;
+  // object-fit prevents the image being warped in mobile
 `;
 
 const ArticleCard = ({ props }) => {
@@ -119,7 +121,7 @@ const ArticleCard = ({ props }) => {
         <img
           src={props.article_image}
           alt="Article"
-          style={{ width: "100%", height: "100%"}}
+          style={{ width: "100%", height: "100%", objectFit: "cover"}}
         ></img>
       </ImgContainer>
       <div style={{ position: 'relative', display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
