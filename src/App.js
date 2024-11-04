@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ArticleGrid from "./components/ArticleGrid";
+import Interactive from './components/Interactive';
 import Landing from './components/Landing';
 import Background from './components/Background';
 import Cursor from './images/PencilCursor.svg';
@@ -23,6 +24,7 @@ function App() {
     <div className="App" style={{background: '#94ccee',  zIndex: -1, cursor: `url(${Cursor}), auto`}}>
       <Header/>
       <Landing/>
+      <Interactive/>
       <br></br>
       <br></br>
       <br></br>
