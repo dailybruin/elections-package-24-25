@@ -35,12 +35,13 @@ const TitleContainer = styled.div`
   z-index: 1;
 `;
 const Title = styled.div`
-    font-family: BruinBlock;
-    font-size: clamp(40px, 5vw, 70px);
-    font-weight: 900;
-    line-height: 90px;
-    text-align: center;
     color: #FBFBFB;
+    text-align: center;
+    font-family: Moul;
+    font-size: clamp(25px, 5vw, 70px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
     
 `
 
@@ -66,7 +67,7 @@ const ArticleGrid = ({ articles, title, isLast }) => {
   return (
     <>
       <TitleContainer>
-        <Title>★{title}★</Title>
+        <Title>★ {title} ★</Title>
       </TitleContainer>
       <WhiteStripe />
       <RedStripe />
