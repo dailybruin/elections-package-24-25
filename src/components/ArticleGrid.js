@@ -46,7 +46,7 @@ const Title = styled.div`
 `
 
 const WhiteStripe = styled.div`
-width: 57.3%;
+  width: 57.3%;
   height: 1em;
   margin: 0 auto;
   background: #ffffff;

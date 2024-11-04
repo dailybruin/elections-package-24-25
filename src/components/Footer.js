@@ -110,9 +110,17 @@ const Socials = styled.div`
   }
 `;
 
+const TextContainer = styled.div`
+  display: flex;             
+  justify-content: center; 
+  align-items: flex-end;    
+  width: 100%;                
+  height: 100%;               
+  padding: 1em;  
+`
 const SuzyText = styled.p`
   position: absolute;
-  bottom: 0.1em;
+  bottom: 1em;
   font-size: 1vw;
   color: white;
   text-align: center;
@@ -137,7 +145,8 @@ const Footer = () => {
             <a href="http://eepurl.com/cFEiZX" target="_blank" rel="noreferrer" ><img src={email} alt="Email"/></a>
           </Socials>
         </GoldPlate>
-        <SuzyText>Built with Suzy’s ♥ in Kerckhoff 118 by Henry Nguyen, Max Fukuhara, Emily Zhang, Sahil Sheth, Evelyn Cho, Armaan Bassi, Jennifer Lee, Ritvik Irigireddy, Kirsten Reign Cabalonga, and Sakshi Thoutireddy. Designed by Nhan Nguyen and Lindsey Murto.</SuzyText>
+        <TextContainer><SuzyText>Built with Suzy’s ♥ in Kerckhoff 118 by Henry Nguyen, Max Fukuhara, Emily Zhang, Sahil Sheth, Evelyn Cho, Armaan Bassi, Jennifer Lee, Ritvik Irigireddy, Kirsten Reign Cabalonga, and Sakshi Thoutireddy. Designed by Nhan Nguyen and Lindsey Murto.</SuzyText>
+</TextContainer>
       </FooterBox>
     </Container>
   );

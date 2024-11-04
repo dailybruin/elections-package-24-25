@@ -1,3 +1,8 @@
+
+* {
+  cursor: url('./images/PencilCursor.svg'), auto;
+}
+
 .App {
   text-align: center;
 }
@@ -26,6 +31,17 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.cursor {
+  background-color: white;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
 }
 
 @keyframes App-logo-spin {

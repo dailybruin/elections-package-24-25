@@ -13,6 +13,8 @@ function App() {
   const [data, setData] = useState(null);
   
   useEffect(() => {
+
+
     fetch(
       "https://kerckhoff.dailybruin.com/api/packages/flatpages/elections-package-24-25"
     )
@@ -20,6 +22,8 @@ function App() {
       .then((res) => setData(res.data["article.aml"]));
 
   }, []);
+
+
 
 
 

@@ -9,7 +9,7 @@ const CloudLayer = styled.div`
   top: ${({ top }) => top || "0%"};
   left: 0;
   width: 100%;
-  height: 730%; /* Making it taller to cover the screen smoothly */
+  height: 880%; /* Making it taller to cover the screen smoothly */
   background-image: url(${Cloud001});
   background-repeat: repeat;
   background-size: ${({ cloudSize }) => cloudSize || "50%"};
