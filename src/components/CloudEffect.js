@@ -1,13 +1,15 @@
 import styled from "styled-components";
 import { useEffect, useState } from "react";
-import Cloud001 from "../images/cloud01.svg";
+import Cloud001 from "../images/cloud04.svg";
+import { mediaQueries } from '../shared/config';
+
 
 const CloudLayer = styled.div`
   position: fixed;
   top: ${({ top }) => top || "0%"};
   left: 0;
   width: 100%;
-  height: 200%; /* Making it taller to cover the screen smoothly */
+  height: 730%; /* Making it taller to cover the screen smoothly */
   background-image: url(${Cloud001});
   background-repeat: repeat;
   background-size: ${({ cloudSize }) => cloudSize || "50%"};
@@ -17,6 +19,9 @@ const CloudLayer = styled.div`
   );
   opacity: ${({ opacity }) => opacity || 0.5};
   transition: transform 0.5s ease-out;
+  ${mediaQueries.mobile} {
+    height: 390%;
+  }
 `;
 
 const Clouds = () => {
@@ -37,18 +42,8 @@ const Clouds = () => {
 
   return (
     <>
-      <CloudLayer 
-        top="10%" 
-        cloudSize="40%" 
-        offsetY={getCloudOffset(0.2)} 
-        opacity="0.7" 
-      />
-      <CloudLayer 
-        top="20%" 
-        cloudSize="30%" 
-        offsetY={getCloudOffset(0.4)} 
-        opacity="0.5" 
-      />
+  
+      
       <CloudLayer 
         top="30%" 
         cloudSize="20%" 
