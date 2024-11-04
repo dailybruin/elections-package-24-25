@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Video from "../images/landing.mp4";
+import Video from "../images/landing.gif";
 
 
 const Container = styled.div`
@@ -18,14 +18,18 @@ const Container = styled.div`
   z-index: 1;
 `;
 
-
+const Image = styled.img`
+  width: 100vw;
+  height: auto;
+  object-fit: cover;
+`;
 
 const Landing = () => {
     
     return (
         <>
             <Container>
-                <iframe width="100%" height="600px" src={Video} allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <Image src={Video} alt="Landing image" />
             </Container>
         </>
     );
