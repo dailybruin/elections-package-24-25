@@ -26,7 +26,7 @@ function App() {
   return data && (
     <div className="App" style={{background: '#94ccee',  zIndex: -1, cursor: `url(${Cursor}) 20 80, auto`}}>
       <Header/>
-      <Landing/>
+      <Landing landing={data.landing}/>
       <Interactive/>
       <br></br>
       <br></br>

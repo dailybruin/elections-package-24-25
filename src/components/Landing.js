@@ -24,12 +24,13 @@ const Image = styled.img`
   object-fit: cover;
 `;
 
-const Landing = () => {
+const Landing = ({landing}) => {
     
     return (
         <>
             <Container>
                 <Image src={Video} alt="Landing image" />
+                <p>landing credits</p> {/*landing.landing_credits*/}
             </Container>
         </>
     );

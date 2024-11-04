@@ -5,7 +5,7 @@ import ArticleCard from "../components/ArticleCard.js";
 
 const Container = styled.div`
     position: relative;
-    width: 60%;
+    width: 55%;
     margin: 0 auto;
     justify-content: center;
     padding: 1em;
@@ -26,7 +26,7 @@ const Container = styled.div`
 
 const TitleContainer = styled.div`
   gap: 0px;
-  width: 62.5%;
+  width: 57.3%;
   margin: 0 auto;
   justify-content: center;
   opacity: 0px;
@@ -46,7 +46,7 @@ const Title = styled.div`
 `
 
 const WhiteStripe = styled.div`
-  width: 62.5%;
+width: 57.3%;
   height: 1em;
   margin: 0 auto;
   background: #ffffff;
@@ -55,7 +55,7 @@ const WhiteStripe = styled.div`
 `;
 
 const RedStripe = styled.div`
-  width: 62.5%;
+  width: 57.3%;
   height: 1em;
   margin: 0 auto;
   background: #cd2027;

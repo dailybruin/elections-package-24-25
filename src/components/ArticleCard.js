@@ -116,7 +116,8 @@ const ImgContainer = styled("div")`
 
 const ArticleCard = ({ props }) => {
   return (
-    <ArticleContainer>
+    <a href={props.article_url} style={{ textDecoration: 'none', color: 'inherit' }}>
+    <ArticleContainer >
       <ImgContainer>
         <img
           src={props.article_image}
@@ -142,6 +143,7 @@ const ArticleCard = ({ props }) => {
         </div>
       </div>
     </ArticleContainer>
+    </a>
   );
 };
 

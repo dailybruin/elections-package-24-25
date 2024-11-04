@@ -26,6 +26,7 @@ const Container = styled.div`
 
 
   @media (max-width: 768px) {
+    padding-top: 2.8em;
     background-size: 150% auto;
     height: 175px; /* Adjusted for smaller screens */
   }
@@ -47,6 +48,7 @@ const FooterBox = styled.div`
   position: relative;
   z-index: 2; /* Ensure FooterBox is above Container */
   overflow: hidden; /* Ensure nothing spills out if heights are limited */
+  padding-bottom: 1em;
 `;
 
 
@@ -111,13 +113,13 @@ const Socials = styled.div`
 const SuzyText = styled.p`
   position: absolute;
   bottom: 0.1em;
-  font-size: 14px;
+  font-size: 1vw;
   color: white;
   text-align: center;
   width: 70%;
 
   ${mediaQueries.mobile} {
-    font-size: 4px;
+    font-size: 3px;
     bottom: 3px;
   }
 `;
